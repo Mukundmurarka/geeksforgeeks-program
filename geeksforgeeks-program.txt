@@ -100,3 +100,55 @@ public class Solution {
 
 
 
+Java String Tokens
+
+code
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        
+        scan.close();
+        s=removeelement(s);
+        if(s.length()==0){
+            System.out.print(0);
+            return ;
+
+        }
+        
+       
+        String[] word= s.split("[^a-zA-Z]+");
+        System.out.println(word.length);
+            for(String w:word){
+                System.out.println(w);
+            }
+                
+
+
+
+    }
+    private static String removeelement(String s1){
+                int j;
+                boolean status=true;
+                for (j=0;j<=s1.length();j++){
+                    if(Character.isLetter(s1.charAt(j))== status){
+                        break;
+                    }
+                    
+                    
+                }
+                return s1.substring(j);
+            }
+        }
+    
+
+
+
+
+
+
